@@ -39,13 +39,24 @@
 
     <div id="about-container">
         <h2>A propos</h2>
-        <img src="assets/img/IMG_2955.jpg" alt="sefl picture" id="about-img">
-        <p id="about-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo doloribus molestias non sit fuga architecto, quam vel obcaecati nisi consectetur temporibus dolor quasi quisquam expedita voluptatum. Officia at praesentium delectus!
-        </p>
-        <hr>
-    </div>
+        <div id="about-content">
+            <img src="assets/img/IMG_2955.jpg" alt="sefl picture" id="about-img">
+            <p id="about-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo doloribus molestias non sit fuga architecto, quam vel obcaecati nisi consectetur temporibus dolor quasi quisquam expedita voluptatum. Officia at praesentium delectus!
+            </p>
+        </div>
 
+
+        <hr id="about-hr">
+    </div>
+    <div id="skill-container">
+        <h2>Competence</h2>
+        <div class="skill-item">
+            <p class="skill-text">
+
+            </p>
+        </div>
+    </div>
 </body>
 
 
