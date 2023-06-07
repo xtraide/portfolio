@@ -15,10 +15,10 @@
         <nav id="nav-container">
             <img src="assets/img/logo_b.png" alt="logo du site" id="logo">
             <div id="nav-text">
-                <p class="nav-item">A propos</p>
-                <p class="nav-item">Competence</p>
-                <p class="nav-item">Projet</p>
-                <p class="nav-item">Contact</p>
+                <p class="nav-item"><a href="">A propos</a></p>
+                <p class="nav-item"><a href="">Competence</a></p>
+                <p class="nav-item"><a href="">Projet</a></p>
+                <p class="nav-item"><a href="">Contact</a></p>
             </div>
             <div id="nav-link">
                 <a href="https://github.com/xtraide"><img class="logo-link" src="assets/img/github banc.png" alt="logo git"></a>
