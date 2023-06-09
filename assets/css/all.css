@@ -275,5 +275,10 @@ hr {
 }
 
 .carousel-menu li.active {
-    background-color: black;
+    background-color: rgb(255, 255, 255);
+}
+
+.carousel-img {
+    width: 600px;
+    height: auto;
 }

@@ -99,7 +99,7 @@
         <div class="carousel">
             <div class="carousel-items">
                 <div class="item active">
-                    <img src="assets/img/sae203.png" alt="Image 1" class="carousel-img">
+                    <a href="ee"><img src="assets/img/sae203.png" alt="Image 1" class="carousel-img"></a>
                 </div>
                 <div class="item">
                     <img src="image2.jpg" alt="Image 2" class="carousel-img">
@@ -122,6 +122,7 @@
                 let currentItem = 0;
 
                 function showItem(index) {
+                    console.log(index);
                     carouselItems.style.transform = `translateX(-${index * 100}%)`;
                     carouselMenuItems[currentItem].classList.remove("active");
                     carouselMenuItems[index].classList.add("active");
@@ -135,8 +136,10 @@
                 });
 
                 setInterval(function() {
+
                     let newIndex = (currentItem + 1) % carouselMenuItems.length;
                     showItem(newIndex);
+
                 }, 3000);
             });
         </script>
