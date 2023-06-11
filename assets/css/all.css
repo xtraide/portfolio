@@ -1,5 +1,6 @@
 * {
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
@@ -154,7 +155,7 @@ hr {
     font-weight: 700;
     font-size: 30px;
     line-height: 61px;
-    width: 600px;
+    width: 700px;
 }
 
 #about-content {
@@ -172,7 +173,7 @@ hr {
 }
 
 /* SKILL */
-#skill-container {}
+
 
 #skill-flex {
     margin-left: 230px;
@@ -281,4 +282,40 @@ hr {
 .carousel-img {
     width: 600px;
     height: auto;
+}
+
+/*contact */
+.contact-label {
+    font-size: 35px;
+}
+
+#contact-container {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+}
+
+
+#contact-send {
+    position: relative;
+    border-radius: 5px;
+    border: none;
+    background-color: white;
+    border: 1px solid;
+    font-size: 30px;
+    top: 85%;
+}
+
+#contact-msg {
+    width: 450px;
+
+}
+
+label {
+    color: white;
+}
+
+.nav-transi {
+    transition: a;
 }
