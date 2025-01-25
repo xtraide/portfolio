@@ -1,0 +1,51 @@
+[
+    {
+        "id": "1",
+        "title": "Projet 1",
+        "link": "https://example.com/projet1",
+        "github": "https://github.com/user/projet1",
+        "description": "Description du projet 1",
+        "fullDescription": "Description complète du projet 1",
+        "image": "vite.svg",
+        "frontimage": "vite.svg",
+        "tech": [
+            "React",
+            "Node.js",
+            "Express"
+        ],
+        "bgcolor": "#ff333c",
+        "date": "2023-01-01"
+    },
+    {
+        "id": "2",
+        "title": "Projet 2",
+        "link": "https://example.com/projet2",
+        "github": "https://github.com/user/projet2",
+        "description": "Description du projet 2",
+        "fullDescription": "Description complète du projet 2",
+        "image": "vite.svg",
+        "frontimage": "vite.svg",
+        "tech": [
+            "Vue.js",
+            "Firebase"
+        ],
+        "bgcolor": "#e333ff",
+        "date": "2023-02-01"
+    },
+    {
+        "id": "3",
+        "title": "Projet 3",
+        "link": "https://example.com/projet3",
+        "github": "https://github.com/user/projet3",
+        "description": "Description du projet 3",
+        "fullDescription": "Description complète du projet 3",
+        "image": "vite.svg",
+        "frontimage": "vite.svg",
+        "tech": [
+            "Angular",
+            "Spring Boot"
+        ],
+        "bgcolor": "#e0e0e0",
+        "date": "2023-03-01"
+    }
+]

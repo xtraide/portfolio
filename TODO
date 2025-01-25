@@ -1,0 +1,22 @@
+<front>
+    favicon
+    <projects>carousel horizontal bg color qui transitionne vers la couleur du projet</projects>
+
+
+    link linkdin
+    mobile
+</front>
+
+<api>
+    projet
+    id
+    title
+    link
+    github
+    description
+    image
+    frontimage
+    tech
+    bg color
+    date
+</api>
