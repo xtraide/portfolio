@@ -7,11 +7,10 @@ import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry';
 
 export default function Skills() {
     const canvasRef = useRef(null);
-    const statsRef = useRef(null);
     useEffect(() => {
         const canvas = canvasRef.current;
-        let scene, camera, controls;
-        let insetWidth, insetHeight;
+        let scene: any, camera: any, controls;
+
 
         const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
         renderer.setSize(window.innerWidth / 2, window.innerHeight / 2);
@@ -47,18 +46,13 @@ export default function Skills() {
 
         // Load font and create text
         const loader = new FontLoader();
-        let textMesh;
-        loader.load('https://threejs.org/examples/fonts/helvetiker_regular.typeface.json', function (font) {
+        let textMesh: any;
+        loader.load('https://threejs.org/examples/fonts/helvetiker_regular.typeface.json', function (font: any) {
             const textGeometry = new TextGeometry('Hello Three.js!', {
                 font: font,
-                size: 5,
+                size: 1,
                 height: 1,
-                curveSegments: 12,
-                bevelEnabled: true,
-                bevelThickness: 0.5,
-                bevelSize: 0.3,
-                bevelOffset: 0,
-                bevelSegments: 5
+                curveSegments: 5,
             });
             const textMaterial = new THREE.MeshBasicMaterial({ color: 0xffffff });
             textMesh = new THREE.Mesh(textGeometry, textMaterial);
@@ -74,8 +68,7 @@ export default function Skills() {
             camera.updateProjectionMatrix();
             renderer.setSize(window.innerWidth, window.innerHeight);
 
-            insetWidth = window.innerHeight / 4;
-            insetHeight = window.innerHeight / 4;
+
         }
 
         function animate() {
