@@ -4,7 +4,7 @@ import Get from "./CRUD/Get";
 import Post from "./CRUD/Post";
 import Put from "./CRUD/Put";
 import ModelProject from "../models/ModelProject";
-import axios from "axios";
+
 
 const API_URL = `${import.meta.env.VITE_API_URL}`;// /projects
 

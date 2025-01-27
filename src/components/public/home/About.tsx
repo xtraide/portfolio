@@ -1,4 +1,4 @@
-import React from 'react'
+
 
 export default function About() {
     return (
@@ -7,7 +7,7 @@ export default function About() {
                 <div className="col-md-8">
                     <div className="card">
                         <div className="card-header">
-                            <h2>À propos</h2>
+                            <h1>À propos</h1>
                             <h1>Nicolas Thieblemont</h1>
                         </div>
                         <div className="card-body">

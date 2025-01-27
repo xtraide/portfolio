@@ -43,7 +43,7 @@ export default function Project() {
             <div style={{ backgroundColor: bgColor, transition: 'background-color 0.5s' }} className="vh-100 d-flex flex-column justify-content-center">
                 <h1 className="mt-5 pt-5">Projects</h1>
                 <Carousel onSelect={handleSelect} className="flex-grow-1">
-                    {projects.map((project, index) => (
+                    {projects.map((project) => (
                         <Carousel.Item key={project.id} className="vh-100">
                             <div className="d-flex justify-content-center align-items-center vh-100">
                                 <div className="card projectContainer" style={{ width: '25rem' }}>

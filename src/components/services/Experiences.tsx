@@ -3,7 +3,7 @@ import Get from "./CRUD/Get";
 import Post from "./CRUD/Post";
 import Put from "./CRUD/Put";
 import ModelExperience from "../models/ModelExperience";
-import axios from "axios";
+
 
 const API_URL = `${import.meta.env.VITE_API_URL}`; ///experiences
 

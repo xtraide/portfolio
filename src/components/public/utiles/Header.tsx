@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Scrollspy from 'react-scrollspy'
 import '../../../assets/Styles/Header.css'
 export default function Header() {
@@ -13,19 +13,22 @@ export default function Header() {
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
-                    <Scrollspy items={['home', 'skills', 'education', 'experience', 'projects']} currentClassName="active" className="navbar-nav">
+                    <Scrollspy items={['home', 'about', 'skills', /*'education', 'experience',*/'projects']} currentClassName="active" className="navbar-nav">
                         <li className="nav-item">
                             <a className="nav-link" href="#home">Accueil</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#skills">Compétences</a>
+                            <a className="nav-link" href="#about">A propos</a>
                         </li>
                         <li className="nav-item">
+                            <a className="nav-link" href="#skills">Compétences</a>
+                        </li>
+                        {/* <li className="nav-item">
                             <a className="nav-link" href="#education">Etude</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="#experience">Expérience</a>
-                        </li>
+                        </li> */}
                         <li className="nav-item">
                             <a className="nav-link" href="#projects">Projet</a>
                         </li>
