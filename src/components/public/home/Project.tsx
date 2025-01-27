@@ -39,7 +39,7 @@ export default function Project() {
         setBgColor(projects[selectedIndex].bgcolor);
     };
     return (
-        <div className='container-fluid p-0 wh-100'>
+        <div className='container-fluid p-0 col-md-12'>
             <div style={{ backgroundColor: bgColor, transition: 'background-color 0.5s' }} className="vh-100 d-flex flex-column justify-content-center">
                 <h1 className="mt-5 pt-5">Projects</h1>
                 <Carousel onSelect={handleSelect} className="flex-grow-1">
