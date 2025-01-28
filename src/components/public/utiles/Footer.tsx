@@ -8,7 +8,7 @@ import '../../../assets/styles/Footer.css';
 const Footer = () => {
     return (
         <div className="container-fluid col-md-10">
-            <h1 className="text-center mb-4">Contactez-moi</h1>
+            <h1 className="text-center mb-4 title">Contactez-moi</h1>
             <div className="row">
                 <div className="card col-md-6  m-3">
                     <div className="card-body">

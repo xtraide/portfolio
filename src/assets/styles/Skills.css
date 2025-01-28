@@ -10,3 +10,35 @@
     -moz-osx-font-smoothing: grayscale;
     color: aliceblue;
 }
+
+@keyframes translateLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes translateRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.translate-left {
+    animation: translateLeft 1s ease-out forwards;
+}
+
+.translate-right {
+    animation: translateRight 1s ease-out forwards;
+}

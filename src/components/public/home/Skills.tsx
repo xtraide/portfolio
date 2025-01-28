@@ -5,20 +5,23 @@ import { FontLoader } from 'three/examples/jsm/loaders/FontLoader';
 import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry';
 import '../../../assets/styles/Skills.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import { useInView } from 'react-intersection-observer';
 
 export default function Skills() {
     const canvasRef = useRef(null);
+    const { ref: leftRef, inView: leftInView } = useInView({ triggerOnce: true, threshold: 0.1 });
+    const { ref: rightRef, inView: rightInView } = useInView({ triggerOnce: true, threshold: 0.1 });
 
     useEffect(() => {
         const canvas = canvasRef.current;
-        let scene, camera, controls;
+        let scene: THREE.Object3D<THREE.Object3DEventMap>, camera: THREE.Camera, controls;
         const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
         renderer.setClearColor(0x000000, 0); // Fond transparent
 
         scene = new THREE.Scene();
 
         camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 0.1, 1000);
-        camera.position.set(0, 0, 65);
+        camera.position.set(0, 0, 70);
         controls = new OrbitControls(camera, renderer.domElement);
         controls.minDistance = 10;
         controls.maxDistance = 500;
@@ -42,13 +45,13 @@ export default function Skills() {
         group.add(line3);
         group.add(line4);
 
-        const textMeshes = [];
+        const textMeshes: THREE.Mesh<any, THREE.MeshBasicMaterial, THREE.Object3DEventMap>[] = [];
         const loader = new FontLoader();
         const font_url = 'https://threejs.org/examples/fonts/helvetiker_regular.typeface.json';
 
-        function writeText(text, x, y, z) {
-            loader.load(font_url, function (font) {
-                const textGeometry = new TextGeometry(text, { font: font, size: 1.5, height: 1, curveSegments: 5 });
+        function writeText(text: string, x: number, y: number, z: number) {
+            loader.load(font_url, function (font: any) {
+                const textGeometry = new TextGeometry(text, { font: font, size: 1, height: 1, curveSegments: 5 });
                 const textMaterial = new THREE.MeshBasicMaterial({ color: 0xffffff, transparent: true });
                 const textMesh = new THREE.Mesh(textGeometry, textMaterial);
                 textMesh.position.set(x, y, z);
@@ -108,12 +111,13 @@ export default function Skills() {
 
     return (
         <div className='container-fluid p-0 skills-container col-md-10'>
-            <div className="d-flex flex-column justify-content-center">
-                <h1 className="title">Compétences</h1>
+            <div ref={leftRef} className={`col-md-3 ${leftInView ? 'translate-left' : ''}`}>
                 <div className="d-flex flex-column justify-content-center">
-                    <div className='row'>
-                        <div className='col-md-5'>
-                            <div className="card bg-dark">
+                    <h1 className="title">Compétences</h1>
+                    <div className="d-flex flex-column justify-content-center">
+                        <div className='row'>
+
+                            <div className="card bg-transparent ">
                                 <div className="card-body">
                                     <h2 className="card-title text">Outils</h2>
                                     <ul className="list-unstyled text">
@@ -128,12 +132,12 @@ export default function Skills() {
                                 </div>
                             </div>
                         </div>
-                        <div className='col-md-7 d-flex flex-column justify-content-center'>
+                        <div ref={rightRef} className={`col-md-9 d-flex flex-column justify-content-center ${rightInView ? 'translate-right' : ''}`}>
                             <canvas ref={canvasRef} />
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 }
