@@ -4,7 +4,7 @@ export default function Education() {
     return (
         <div className='container-fluid  wh-100'>
             <div className="vh-100 d-flex flex-column  justify-content-center">
-                <h1 className="mt-5 pt-5">Etude</h1>
+                <h1 className="title">Etude</h1>
                 <div className=" vh-100 d-flex flex-column justify-content-center s">
                     <div>
                         <h2>BUT MMI</h2>

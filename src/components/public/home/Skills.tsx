@@ -109,7 +109,7 @@ export default function Skills() {
     return (
         <div className='container-fluid p-0 skills-container col-md-10'>
             <div className="d-flex flex-column justify-content-center">
-                <h1 className="mt-5 pt-5 text">Compétences</h1>
+                <h1 className="title">Compétences</h1>
                 <div className="d-flex flex-column justify-content-center">
                     <div className='row'>
                         <div className='col-md-5'>

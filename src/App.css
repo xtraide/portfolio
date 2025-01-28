@@ -1,5 +1,8 @@
 #root {
     --title-color: #f0f0f0;
+    --title-alt-color: #282b38;
+    --title-font-size: 80px;
+    --description-font-size: 24px;
 }
 
 
@@ -15,4 +18,15 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: aliceblue;
+    font-size: var(--description-font-size);
+}
+
+.alter-color {
+    color: var(--title-alt-color);
+}
+
+h1.title {
+    font-size: var(--title-font-size);
+    color: var(--title-color);
+
 }

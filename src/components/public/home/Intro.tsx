@@ -6,7 +6,7 @@ const Intro = () => {
     return (
         <div className="intro d-flex flex-column justify-content-between vh-100">
             <div className="d-flex flex-column justify-content-center align-items-center flex-grow-1">
-                <h1>Nicolas Thieblemont</h1>
+                <h1 className='title'>Nicolas Thieblemont</h1>
                 <p className="text">Développeur Fullstack</p>
                 <div className="stars">
                     {[...Array(50)].map((_, i) => (

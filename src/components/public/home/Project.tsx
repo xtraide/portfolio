@@ -41,7 +41,7 @@ export default function Project() {
     return (
         <div className='container-fluid p-0 col-md-12'>
             <div style={{ backgroundColor: bgColor, transition: 'background-color 0.5s' }} className="vh-100 d-flex flex-column justify-content-center">
-                <h1 className="mt-5 pt-5">Projects</h1>
+                <h1 className="title">Projects</h1>
                 <Carousel onSelect={handleSelect} className="flex-grow-1">
                     {projects.map((project) => (
                         <Carousel.Item key={project.id} className="vh-100">

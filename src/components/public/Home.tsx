@@ -8,6 +8,7 @@ import Skills from './home/Skills';
 import fullpage from 'fullpage.js';
 import 'fullpage.js/dist/fullpage.css';
 import Footer from './utiles/Footer';
+import '../../assets/styles/Home.css';
 
 export default function Home() {
     useEffect(() => {
@@ -15,9 +16,10 @@ export default function Home() {
             autoScrolling: true,
             navigation: true,
             anchors: ['home', 'about', 'skills', /*'education', 'experience',*/ 'projects', 'contact'],
-            navigationTooltips: ['Home', 'About', 'Skills', /*'Education', 'Experience',*/ 'Projects', 'Contact'],
+            navigationTooltips: ['Accueil', 'À propos', 'Compétences', /*'Education', 'Experience',*/ 'Projets', 'Contact'],
             showActiveTooltip: true,
-            scrollingSpeed: 900
+            scrollingSpeed: 900,
+
         });
 
         return () => {
