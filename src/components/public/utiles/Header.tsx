@@ -5,7 +5,7 @@ import '../../../assets/styles/Header.css';
 
 const Header = () => {
     return (
-        <div>
+        <div className=''>
             <nav className="navbar navbar-expand-lg navbar-light bg-transparent fixed-top">
                 <a className="navbar-brand text" href="#">Portfolio</a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

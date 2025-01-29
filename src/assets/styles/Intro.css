@@ -23,7 +23,7 @@
     font-size: 24px;
 }
 
-.stars {
+.intro .stars {
     position: fixed;
     top: 0;
     left: 0;
@@ -32,7 +32,7 @@
     transform: rotate(-45deg);
 }
 
-.star {
+.intro .star {
     --star-color: var(--primary-color);
     --star-tail-length: 6em;
     --star-tail-height: 2px;
@@ -53,68 +53,68 @@
 }
 
 @media screen and (max-width: 750px) {
-    .star {
+    .intro .star {
         animation: fall var(--fall-duration) var(--fall-delay) linear infinite;
     }
 }
 
-.star:nth-child(1) {
+.intro .star:nth-child(1) {
     --star-tail-length: 6.23em;
     --top-offset: 45.79vh;
     --fall-duration: 11.313s;
     --fall-delay: 7.47s;
 }
 
-.star:nth-child(2) {
+.intro .star:nth-child(2) {
     --star-tail-length: 5.39em;
     --top-offset: 22.04vh;
     --fall-duration: 11.15s;
     --fall-delay: 5.845s;
 }
 
-.star:nth-child(3) {
+.intro .star:nth-child(3) {
     --star-tail-length: 7.07em;
     --top-offset: 93.99vh;
     --fall-duration: 8.754s;
     --fall-delay: 3.637s;
 }
 
-.star:nth-child(4) {
+.intro .star:nth-child(4) {
     --star-tail-length: 6.61em;
     --top-offset: 3.34vh;
     --fall-duration: 10.276s;
     --fall-delay: 6.212s;
 }
 
-.star:nth-child(5) {
+.intro .star:nth-child(5) {
     --star-tail-length: 5.29em;
     --top-offset: 74.16vh;
     --fall-duration: 8.366s;
     --fall-delay: 1.597s;
 }
 
-.star:nth-child(6) {
+.intro .star:nth-child(6) {
     --star-tail-length: 6.4em;
     --top-offset: 52.7vh;
     --fall-duration: 10.93s;
     --fall-delay: 2.768s;
 }
 
-.star:nth-child(7) {
+.intro .star:nth-child(7) {
     --star-tail-length: 7.06em;
     --top-offset: 46.3vh;
     --fall-duration: 10.878s;
     --fall-delay: 1.806s;
 }
 
-.star:nth-child(8) {
+.intro .star:nth-child(8) {
     --star-tail-length: 7.21em;
     --top-offset: 40.58vh;
     --fall-duration: 8.364s;
     --fall-delay: 3.858s;
 }
 
-.star:nth-child(9) {
+.intro .star:nth-child(9) {
     --star-tail-length: 7.42em;
     --top-offset: 41.12vh;
     --fall-duration: 7.032s;
@@ -408,7 +408,7 @@
     --fall-delay: 6.17s;
 }
 
-.star::before,
+.intro .star::before,
 .star::after {
     position: absolute;
     content: "";
@@ -421,11 +421,11 @@
     animation: blink 2s linear infinite;
 }
 
-.star::before {
+.intro .star::before {
     transform: rotate(45deg);
 }
 
-.star::after {
+.intro .star::after {
     transform: rotate(-45deg);
 }
 
@@ -474,30 +474,30 @@
     }
 }
 
-.un {
+.intro .un {
     -webkit-animation-delay: .1s;
     -moz-animation-delay: .1s;
     animation-direction: alternate;
     animation-delay: alternate;
 }
 
-.un,
+.intro .un,
 .deux,
 .trei {
     animation: mouse-scroll 1s infinite;
     animation: blinkarrow 1s infinite;
 }
 
-.un {
+.intro .un {
     animation-delay: 0s;
 }
 
-.deux {
+.intro .deux {
     animation-delay: 0.33s;
     /* 1/3 de seconde après .un */
 }
 
-.m_scroll_arrows {
+.intro .m_scroll_arrows {
     display: block;
     width: 5px;
     height: 5px;

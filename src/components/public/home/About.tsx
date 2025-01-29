@@ -10,13 +10,16 @@ const About = () => {
     });
 
     return (
-        <div className="container mt-5">
+        <div className="container-fluid about" >
+            <div className='stars'>
+                <div className='star'></div>
+            </div>
             <div ref={ref} className={`fade-in-section ${inView ? 'is-visible' : ''}`}>
                 <div className="row">
                     <div className="col-md-4 d-flex justify-content-center align-items-center">
                         <img src="/vite.svg" alt="Vite Logo" className="img-fluid" />
                     </div>
-                    <div className="col-md-8">
+                    <div className="col-md-7">
                         <div className="card bg-transparent text">
                             <div className="card-header">
                                 <h1 className='title'>À propos</h1>

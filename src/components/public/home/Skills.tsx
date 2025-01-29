@@ -112,7 +112,7 @@ export default function Skills() {
     return (
         <div className='container-fluid p-0 skills-container col-md-10'>
             <div className="d-flex flex-row justify-content-center">
-                <div ref={leftRef} className={`col-md-4 ${leftInView ? 'translate-left' : ''}`}>
+                <div ref={leftRef} className={`col-md-3 ${leftInView ? 'translate-left' : ''}`}>
                     <h1 className="title">Compétences</h1>
                     <div className="justify-content-center">
                         <div className='row'>
@@ -133,7 +133,7 @@ export default function Skills() {
                         </div>
                     </div>
                 </div>
-                <div ref={rightRef} className={`col-md-8 d-flex flex-column justify-content-center ${rightInView ? 'translate-right' : ''}`}>
+                <div ref={rightRef} className={`col-md-9 d-flex flex-column justify-content-center ${rightInView ? 'translate-right' : ''}`}>
                     <canvas ref={canvasRef} />
                 </div>
             </div>
