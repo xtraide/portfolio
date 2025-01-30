@@ -2,6 +2,7 @@ import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../../assets/styles/About.css';
+import { gsap } from "gsap";
 
 const About = () => {
     const { ref, inView } = useInView({
@@ -9,6 +10,24 @@ const About = () => {
         threshold: 0.1,
     });
 
+    useEffect(() => {
+        if (inView) {
+            gsap.to(".star", {
+                duration: 9,
+                keyframes: [
+                    { x: 70, y: 20, rotate: -50, scale: 1, duration: 2.25 },
+                    { x: 0, y: 100, rotate: -65, duration: 2.25 },
+                    { x: 0, y: 200, rotate: -85, duration: 1.35 },
+                    { x: 150, y: 300, rotate: -130, duration: 2.25 },
+                    { x: 200, y: 400, rotate: -130, duration: 1.35 },
+                    { x: 350, y: 500, rotate: -130, duration: 0.9 },
+                    { x: 500, y: 600, rotate: -130, duration: 1.35 }
+                ],
+                ease: "linear",
+                repeat: -1
+            });
+        }
+    }, [inView]);
     return (
         <div className="container-fluid about" >
             <div className='stars'>
@@ -39,3 +58,7 @@ const About = () => {
 };
 
 export default About;
+
+function useEffect(arg0: () => void, arg1: boolean[]) {
+    throw new Error('Function not implemented.');
+}

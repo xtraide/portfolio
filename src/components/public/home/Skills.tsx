@@ -109,8 +109,11 @@ export default function Skills() {
         };
     }, []);
 
+
     return (
-        <div className='container-fluid p-0 skills-container col-md-10'>
+        <div className='container-fluid p-0 skills col-md-10'>
+            <div className="gradient"></div>
+
             <div className="d-flex flex-row justify-content-center">
                 <div ref={leftRef} className={`col-md-3 ${leftInView ? 'translate-left' : ''}`}>
                     <h1 className="title">Compétences</h1>
@@ -133,11 +136,15 @@ export default function Skills() {
                         </div>
                     </div>
                 </div>
+                <div className="gradient"></div>
                 <div ref={rightRef} className={`col-md-9 d-flex flex-column justify-content-center ${rightInView ? 'translate-right' : ''}`}>
                     <canvas ref={canvasRef} />
                 </div>
             </div>
         </div>
+
+
+
 
     );
 }
