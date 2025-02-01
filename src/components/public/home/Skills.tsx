@@ -5,12 +5,15 @@ import { FontLoader } from 'three/examples/jsm/loaders/FontLoader';
 import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry';
 import '../../../assets/styles/Skills.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import { useInView } from 'react-intersection-observer';
+
+
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function Skills() {
     const canvasRef = useRef(null);
-    const { ref: leftRef, inView: leftInView } = useInView({ triggerOnce: true, threshold: 0.1 });
-    const { ref: rightRef, inView: rightInView } = useInView({ triggerOnce: true, threshold: 0.1 });
+
 
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -109,19 +112,55 @@ export default function Skills() {
         };
     }, []);
 
+    useGSAP(() => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.fromTo(
+            '.translate-left',
+            { opacity: 0, x: -100 },
+            {
+                opacity: 1,
+                x: 0,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: '.translate-left',
+                    start: 'top 80%',
+                    end: 'bottom 20%',
+                    scrub: true,
+                    markers: true,
+                }
+            });
+
+        gsap.fromTo('.translate-right',
+            { opacity: 0, x: 100 },
+            {
+                opacity: 1,
+                x: 0,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: '.translate-right',
+                    start: 'top 80%',
+                    end: 'bottom 20%',
+                    scrub: true,
+                    markers: true,
+                }
+            }
+        )
+
+    });
+
 
     return (
-        <div className='container-fluid p-0 skills col-md-10'>
-            <div className="gradient"></div>
-
+        <div className='container-fluid p-0 skills col-md-10 mt-5'>
             <div className="d-flex flex-row justify-content-center">
-                <div ref={leftRef} className={`col-md-3 ${leftInView ? 'translate-left' : ''}`}>
+                <div className='col-md-4 translate-left'>
                     <h1 className="title">Compétences</h1>
+
                     <div className="justify-content-center">
                         <div className='row'>
                             <div className="card bg-transparent">
                                 <div className="card-body">
-                                    <h2 className="card-title text">Outils</h2>
+                                    <h2 className="card-title ">Outils</h2>
                                     <ul className="list-unstyled text">
                                         <li><i className="fab fa-git-alt"></i> git</li>
                                         <li><i className="fas fa-code"></i> vscode</li>
@@ -137,14 +176,11 @@ export default function Skills() {
                     </div>
                 </div>
                 <div className="gradient"></div>
-                <div ref={rightRef} className={`col-md-9 d-flex flex-column justify-content-center ${rightInView ? 'translate-right' : ''}`}>
+                <div className='col-md-8 d-flex flex-column justify-content-center translate-right'>
                     <canvas ref={canvasRef} />
                 </div>
             </div>
-        </div>
-
-
-
+        </div >
 
     );
 }

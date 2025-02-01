@@ -9,7 +9,13 @@
 
 body {
     background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
-    overflow: hidden;
+
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
 }
 
 .text {
@@ -21,11 +27,12 @@ body {
     font-size: var(--description-font-size);
 }
 
+
 .alter-color {
     color: var(--title-alt-color);
 }
 
-h1.title {
+.title {
     font-size: 3.2em;
     line-height: 1.1;
     padding: 0.5em;

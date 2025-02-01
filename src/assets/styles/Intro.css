@@ -5,6 +5,7 @@
     min-height: 100vh;
     overflow: hidden;
     --primary-color: #4ec0e9;
+
 }
 
 .intro h1 {
@@ -19,12 +20,9 @@
     margin: 0;
 }
 
-.intro .text {
-    font-size: 24px;
-}
 
 .intro .stars {
-    position: fixed;
+    position: apsolute;
     top: 0;
     left: 0;
     width: 100%;

@@ -1,66 +1,13 @@
-.skills {}
-
-.text {
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    color: aliceblue;
-}
-
-@keyframes translateLeft {
-    from {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes translateRight {
-    from {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-.translate-left {
-    animation: translateLeft 1s ease-out forwards;
-}
-
-.translate-right {
-    animation: translateRight 1s ease-out forwards;
-}
-
-@keyframes rotate {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
 .gradient {
     --size: 750px;
-    --speed: 50s;
+
     --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
     width: var(--size);
     height: var(--size);
     position: absolute;
-    right: 320px;
     filter: blur(calc(var(--size) / 5));
     background-image: linear-gradient(#4377ef58, #7befd05f);
-    animation: rotate var(--speed) var(--easing) alternate infinite;
+
     border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
 }
 
@@ -68,14 +15,4 @@
     .gradient {
         --size: 500px;
     }
-}
-
-.skills {
-    overflow: hidden;
-
-}
-
-/* This is just to transition when you change the viewport size. */
-.skills {
-    transition: all 0.5s ease-out;
 }

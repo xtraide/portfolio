@@ -1,22 +1,25 @@
-import React, { useEffect, useState } from 'react'
-import Projects from '../../services/Project'
+import React, { useEffect, useState } from 'react';
+import Projects from '../../services/Project';
 import ModelProject from '../../models/ModelProject';
-import { Carousel } from 'react-bootstrap';
-import '../../../assets/styles/Project.css'
-export default function Project() {
 
+import '../../../assets/styles/Project.css';
+
+import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
+export default function Project() {
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<string | null>(null);
     const [projects, setProjects] = useState<ModelProject[]>([]);
-    const [bgColor, setBgColor] = useState('#fff');
+    const [currentImage, setCurrentImage] = useState<string | null>(null);
 
     useEffect(() => {
         const fetchProjects = async () => {
             try {
                 const response = await Projects.Read();
-
                 setProjects(response);
-                setBgColor(response[0].bgcolor);
             } catch (err) {
                 setError("Erreur lors de la récupération des projets." + err);
             } finally {
@@ -27,6 +30,54 @@ export default function Project() {
         fetchProjects();
     }, []);
 
+    const handleMouseEnter = (e: React.MouseEvent<HTMLHeadingElement, MouseEvent>, project: ModelProject) => {
+        gsap.to(e.currentTarget, {
+            scale: 1.2,
+            color: '#4ec0e9',
+            duration: 0.3,
+        });
+
+        setCurrentImage(project.frontimage);
+        gsap.to('#project-image', {
+            opacity: 1,
+            duration: 0.3,
+        });
+    };
+
+    const handleMouseLeave = (e: React.MouseEvent<HTMLHeadingElement, MouseEvent>) => {
+        gsap.to(e.currentTarget, {
+            scale: 1,
+            color: '#fff',
+            backgroundColor: 'transparent',
+            duration: 0.3,
+        });
+        gsap.to('#project-image', {
+            opacity: 0,
+            duration: 0.3,
+        });
+    };
+
+    useEffect(() => {
+        projects.forEach((project, index) => {
+            gsap.fromTo(
+                `.project-container-${index}`,
+                { opacity: 0, x: 500 },
+                {
+                    opacity: 1,
+                    x: 0,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: `.project-container-${index}`,
+                        start: 'top 100%',
+                        end: 'bottom 90%',
+                        scrub: true, // Synchronise l'animation avec le défilement
+                        markers: true,
+                    }
+                }
+            );
+        });
+    }, [projects]);
+
     if (loading) {
         return <div>Chargement...</div>;
     }
@@ -35,32 +86,35 @@ export default function Project() {
         return <div>Erreur: {error}</div>;
     }
 
-    const handleSelect = (selectedIndex: any) => {
-        setBgColor(projects[selectedIndex].bgcolor);
-    };
     return (
-        <div className='container-fluid p-0 col-md-12'>
-            <div style={{ backgroundColor: bgColor, transition: 'background-color 0.5s' }} className="vh-100 d-flex flex-column justify-content-center">
-                <h1 className="title">Projects</h1>
-                <Carousel onSelect={handleSelect} className="flex-grow-1">
-                    {projects.map((project) => (
-                        <Carousel.Item key={project.id} className="vh-100">
-                            <div className="d-flex justify-content-center align-items-center vh-100">
-                                <div className="card projectContainer" style={{ width: '25rem' }}>
-                                    <img src={import.meta.env.VITE_FRONTEND_URL + project.frontimage} className="card-img-top" alt={project.title} />
-                                    <div className="card-body">
-                                        <h5 className="card-title">{project.title}</h5>
-                                        <p className="card-text">{project.description}</p>
-                                        <a href={project.link} className="btn btn-primary" target="_blank" rel="noopener noreferrer">Lien</a>
-                                        <a href={project.github} className="btn btn-secondary ml-2" target="_blank" rel="noopener noreferrer">GitHub</a>
-                                    </div>
-                                </div>
+        <div className='container-fluid col-md-12'>
+            <div className="row">
+                <div className="col-md-4 d-flex flex-column p-5">
+                    <h1 className="title">Projects</h1>
+                    {projects.map((project, index) => (
+                        <div className={`d-flex project-container project-container-${index}`} key={project.id}>
+                            <div className="">
+                                <h2
+                                    className="project-title title"
+                                    onMouseEnter={(e) => handleMouseEnter(e, project)}
+                                    onMouseLeave={handleMouseLeave}
+                                >
+                                    {project.title}
+                                </h2>
                             </div>
-                        </Carousel.Item>
+                        </div>
                     ))}
-                </Carousel>
+                </div>
+                <div className="col-md-8 d-flex flex-row justify-content-center position-relative ">
+                    <img
+                        id="project-image"
+                        src={currentImage || ''}
+                        alt="Project"
+                        className="project-image img-fluid"
+                        style={{ opacity: 0 }}
+                    />
+                </div>
             </div>
         </div>
-    )
-
+    );
 }
