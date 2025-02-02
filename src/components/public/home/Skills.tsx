@@ -124,8 +124,8 @@ export default function Skills() {
                 duration: 1,
                 scrollTrigger: {
                     trigger: '.translate-left',
-                    start: 'top 80%',
-                    end: 'bottom 20%',
+                    start: 'top 90%',
+                    end: 'bottom 80%',
                     scrub: true,
                     markers: true,
                 }

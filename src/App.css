@@ -3,6 +3,7 @@
     --title-alt-color: #282b38;
     --title-font-size: 80px;
     --description-font-size: 24px;
+    --description-color: aliceblue;
 }
 
 
@@ -23,7 +24,7 @@ body {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: aliceblue;
+    color: var(--description-color);
     font-size: var(--description-font-size);
 }
 
@@ -37,11 +38,8 @@ body {
     line-height: 1.1;
     padding: 0.5em;
     color: var(--title-color);
-
     text-transform: uppercase;
     font-weight: 100;
     letter-spacing: 0.1em;
     margin: 0;
-
-
 }

@@ -27,7 +27,7 @@ const About = () => {
                     scrollTrigger: {
                         trigger: fadeInSection,
                         start: "top 80%", // Déclenchement de l'animation
-                        end: "bottom 20%", // Fin de l'animation
+                        end: "bottom 70%", // Fin de l'animation
                         scrub: true, // Effet de scroll fluide
                         markers: true, // Marqueurs pour déboguer
                     },
@@ -67,7 +67,7 @@ const About = () => {
                                 <h1 className="title">À propos</h1>
                             </div>
                             <div className="card-body">
-                                <p className="card-text description col-md-8">
+                                <p className="card-text text col-md-8">
                                     Étudiant passionné par l'informatique, je suis déterminé à
                                     devenir développeur full stack, avec une préférence marquée pour
                                     le backend. Mon parcours d'apprentissage m'a permis de développer

@@ -6,3 +6,8 @@
 .active {
     color: #4ec0e9 !important;
 }
+
+.nav-link {
+    color: var(--description-);
+
+}

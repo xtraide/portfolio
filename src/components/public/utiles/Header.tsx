@@ -12,18 +12,21 @@ const Header = () => {
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
-                    <Scrollspy items={['home', 'about', 'skills', 'projects']} currentClassName="active" className="navbar-nav w-100 d-flex justify-content-around">
-                        <li className="nav-item flex-fill text-center">
-                            <a className="nav-link text" href="#home">Accueil</a>
+                    <Scrollspy items={['home', 'about', 'skills', 'projects', 'contact']} currentClassName="active" className="navbar-nav d-flex justify-content-around">
+                        <li className="nav-item flex-fill text-center text">
+                            <a className="nav-link " href="#home">Accueil</a>
                         </li>
-                        <li className="nav-item flex-fill text-center">
-                            <a className="nav-link text" href="#about">À propos</a>
+                        <li className="nav-item flex-fill text-center text">
+                            <a className="nav-link " href="#about">À propos</a>
                         </li>
-                        <li className="nav-item flex-fill text-center">
-                            <a className="nav-link text" href="#skills">Compétences</a>
+                        <li className="nav-item flex-fill text-center text">
+                            <a className="nav-link " href="#skills">Compétences</a>
                         </li>
-                        <li className="nav-item flex-fill text-center">
-                            <a className="nav-link text" href="#projects">Projets</a>
+                        <li className="nav-item flex-fill text-center text">
+                            <a className="nav-link " href="#projects">Projets</a>
+                        </li>
+                        <li className="nav-item flex-fill text-center text">
+                            <a className="nav-link " href="#contact">Contact</a>
                         </li>
                     </Scrollspy>
                 </div>
