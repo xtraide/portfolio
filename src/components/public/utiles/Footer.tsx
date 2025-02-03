@@ -36,7 +36,7 @@ export default function Footer() {
 
     return (
         <div className="container-fluid contact">
-            <h1 className="text-center mb-4 title">Contactez-moi</h1>
+            <h1 className="display-1 display-4-sm display-3-md display-2-lg display-1-xl title">Contactez-moi</h1>
             <div className="row mt-5">
                 <div className="col-md-6 mb-3">
                     <div className="card m-3 card-bg box2"

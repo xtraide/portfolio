@@ -47,7 +47,7 @@ const About = () => {
                     </div>
                     <div className="col-md-7">
                         <div className="card bg-transparent text">
-                            <div className="card-header">
+                            <div className="card-header ">
                                 <h1 className="display-1 display-4-sm display-3-md display-2-lg display-1-xl title ">À propos</h1>
                             </div>
                             <div className="card-body">
