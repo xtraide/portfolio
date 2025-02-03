@@ -1,12 +1,12 @@
-#root {
+:root {
     --title-color: #f0f0f0;
     --title-alt-color: #282b38;
-    --title-font-size: 80px;
-    --description-font-size: 24px;
+    --title-font-size: 8vw;
+    /* Utilisation de vw pour une taille de texte responsive */
+    --description-font-size: 2.4vw;
+    /* Utilisation de vw pour une taille de texte responsive */
     --description-color: aliceblue;
 }
-
-
 
 body {
     background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
@@ -29,6 +29,9 @@ body {
     font-size: var(--description-font-size);
 }
 
+.p-font-color {
+    color: var(--description-color);
+}
 
 .alter-color {
     color: var(--title-alt-color);
@@ -37,10 +40,10 @@ body {
 .title {
     font-size: 3.2em;
     line-height: 1.1;
-    padding: 0.5em;
+
     color: var(--title-color);
     text-transform: uppercase;
     font-weight: 100;
     letter-spacing: 0.1em;
-    margin: 0;
+
 }

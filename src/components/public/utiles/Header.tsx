@@ -5,12 +5,11 @@ import '../../../assets/styles/Header.css';
 
 const Header = () => {
     return (
-        <div className=''>
-            <nav className="navbar navbar-expand-lg navbar-light bg-transparent fixed-top">
+
+        <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+            <div className="container-fluid">
                 <a className="navbar-brand text" href="#">Portfolio</a>
-                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
+
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <Scrollspy items={['home', 'about', 'skills', 'projects', 'contact']} currentClassName="active" className="navbar-nav d-flex justify-content-around">
                         <li className="nav-item flex-fill text-center text">
@@ -30,8 +29,9 @@ const Header = () => {
                         </li>
                     </Scrollspy>
                 </div>
-            </nav>
-        </div>
+            </div>
+        </nav>
+
     );
 };
 

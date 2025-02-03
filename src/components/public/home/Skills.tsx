@@ -23,7 +23,7 @@ export default function Skills() {
 
         scene = new THREE.Scene();
 
-        camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 0.1, 1000);
+        camera = new THREE.PerspectiveCamera(40, 16 / 9, 0.1, 1000);
         camera.position.set(0, 0, 70);
         controls = new OrbitControls(camera, renderer.domElement);
         controls.minDistance = 10;
@@ -127,7 +127,7 @@ export default function Skills() {
                     start: 'top 90%',
                     end: 'bottom 80%',
                     scrub: true,
-                    markers: true,
+
                 }
             });
 
@@ -139,10 +139,10 @@ export default function Skills() {
                 duration: 1,
                 scrollTrigger: {
                     trigger: '.translate-right',
-                    start: 'top 80%',
-                    end: 'bottom 20%',
+                    start: 'top 100%',
+                    end: 'bottom 100%',
                     scrub: true,
-                    markers: true,
+
                 }
             }
         )
@@ -151,11 +151,10 @@ export default function Skills() {
 
 
     return (
-        <div className='container-fluid p-0 skills col-md-10 mt-5'>
-            <div className="d-flex flex-row justify-content-center">
-                <div className='col-md-4 translate-left'>
-                    <h1 className="title">Compétences</h1>
-
+        <div className=' p-0 skills col-md-10 mt-5'>
+            <h1 className="display-1 display-4-sm display-3-md display-2-lg display-1-xl title">Compétences</h1>
+            <div className="d-flex flex-column flex-md-row justify-content-center">
+                <div className=' col-12 col-md-4 translate-left'>
                     <div className="justify-content-center">
                         <div className='row'>
                             <div className="card bg-transparent">
@@ -176,8 +175,8 @@ export default function Skills() {
                         </div>
                     </div>
                 </div>
-                <div className="gradient"></div>
-                <div className='col-md-8 d-flex flex-column justify-content-center translate-right'>
+                {/* <div className="gradient"></div> */}
+                <div className='col-12 col-md-8 position-absolute d-flex flex-column justify-content-center translate-right'>
                     <canvas ref={canvasRef} />
                 </div>
             </div>

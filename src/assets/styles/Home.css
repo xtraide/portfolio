@@ -1,0 +1,7 @@
+.development-banner {
+    background-color: #ffcc00;
+    color: #000;
+    z-index: 1;
+    top: 50px;
+    font-weight: bold;
+}

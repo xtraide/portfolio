@@ -6,10 +6,12 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 function App() {
   return (
     <>
+      <main className='container-fluid'>
+        <Header></Header>
 
-      <Header></Header>
+        <Outlet></Outlet>
 
-      <Outlet></Outlet>
+      </main>
 
     </>
   )

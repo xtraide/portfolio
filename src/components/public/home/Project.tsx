@@ -58,6 +58,22 @@ export default function Project() {
     };
 
     useEffect(() => {
+        gsap.fromTo(
+            '.project-translate-right',
+            { opacity: 0, x: 500 },
+            {
+                opacity: 1,
+                x: 0,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: '.project-translate-right',
+                    start: 'top 100%',
+                    end: 'bottom 90%',
+                    scrub: true,
+                }
+            }
+        );
+
         projects.forEach((_project, index) => {
             gsap.fromTo(
                 `.project-container-${index}`,
@@ -71,7 +87,7 @@ export default function Project() {
                         start: 'top 100%',
                         end: 'bottom 90%',
                         scrub: true, // Synchronise l'animation avec le défilement
-                        markers: true,
+
                     }
                 }
             );
@@ -87,15 +103,15 @@ export default function Project() {
     }
 
     return (
-        <div className='container-fluid project col-md-12'>
+        <div className='project col-md-12'>
             <div className="row">
-                <div className="col-md-4 d-flex flex-column p-5">
-                    <h1 className="title">Projects</h1>
+                <div className="col-md-4 d-flex flex-column">
+                    <h1 className="display-1 display-4-sm display-3-md display-2-lg display-1-xl title project-translate-right">Projects</h1>
                     {projects.map((project, index) => (
                         <div className={`d-flex project-container project-container-${index}`} key={project.id}>
                             <div className="">
                                 <h2
-                                    className="project-title title"
+                                    className="project-title title project-font-size"
                                     onMouseEnter={(e) => handleMouseEnter(e, project)}
                                     onMouseLeave={handleMouseLeave}
                                 >

@@ -6,13 +6,12 @@ import Footer from "./utiles/Footer";
 
 import "../../assets/styles/Home.css";
 
-
-
-
 export default function Home() {
-
     return (
         <div id="fullpage">
+            <div className="development-banner alert alert-warning z-3" role="alert">
+                <p>Ce site est en développement. Certaines fonctionnalités peuvent ne pas être disponibles.</p>
+            </div>
             <div className="section" id="home">
                 <Intro />
             </div>

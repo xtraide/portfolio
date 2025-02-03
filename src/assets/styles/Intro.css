@@ -1,14 +1,11 @@
 .intro {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    overflow: hidden;
+
+
     --primary-color: #4ec0e9;
 
 }
 
-.intro h1 {
+/* .intro h1 {
     font-size: 3.2em;
     line-height: 1.1;
     padding: 0.5em;
@@ -18,7 +15,7 @@
     font-weight: 100;
     letter-spacing: 0.1em;
     margin: 0;
-}
+} */
 
 
 .intro .stars {
