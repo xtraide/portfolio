@@ -58,7 +58,7 @@ export default function Project() {
     };
 
     useEffect(() => {
-        projects.forEach((project, index) => {
+        projects.forEach((index) => {
             gsap.fromTo(
                 `.project-container-${index}`,
                 { opacity: 0, x: 500 },

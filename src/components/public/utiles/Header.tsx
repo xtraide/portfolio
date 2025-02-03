@@ -1,4 +1,4 @@
-import React from 'react';
+
 import Scrollspy from 'react-scrollspy';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../../assets/styles/Header.css';

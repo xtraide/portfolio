@@ -1,0 +1,29 @@
+.contact {}
+
+.card-bg {
+    background-color: rgba(0, 0, 0, 0.3);
+
+    backdrop-filter: blur(10px);
+
+    -webkit-backdrop-filter: blur(10px);
+
+    border-radius: 10px;
+
+    padding: 20px;
+
+    color: white;
+
+}
+
+.link-no-color {
+    color: inherit;
+    /* Hérite de la couleur du parent */
+    text-decoration: none;
+    /* Enlève la décoration de texte (soulignement) */
+}
+
+.link-no-color:hover {
+    color: #4ec0e9;
+    /* Change la couleur au survol */
+
+}

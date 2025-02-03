@@ -1,8 +1,8 @@
 import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { FontLoader } from 'three/examples/jsm/loaders/FontLoader';
-import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry';
+import { FontLoader } from 'three/examples/jsm/loaders/FontLoader.js';
+import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry.js';
 import '../../../assets/styles/Skills.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
@@ -16,7 +16,7 @@ export default function Skills() {
 
 
     useEffect(() => {
-        const canvas = canvasRef.current;
+        const canvas = canvasRef.current as unknown as HTMLCanvasElement;
         let scene: THREE.Object3D<THREE.Object3DEventMap>, camera: THREE.Camera, controls;
         const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
         renderer.setClearColor(0x000000, 0); // Fond transparent
@@ -83,8 +83,8 @@ export default function Skills() {
             const width = canvas.clientWidth;
             const height = canvas.clientHeight;
             renderer.setSize(width, height, false);
-            camera.aspect = width / height;
-            camera.updateProjectionMatrix();
+            (camera as THREE.PerspectiveCamera).aspect = width / height;
+
         }
 
         function animate() {
@@ -98,7 +98,7 @@ export default function Skills() {
                 const worldPosition = new THREE.Vector3();
                 mesh.getWorldPosition(worldPosition);
                 const distance = camera.position.distanceTo(worldPosition);
-                mesh.material.opacity = Math.max(0, 1 - distance / 100);
+                mesh.material.opacity = Math.max(0, 1 - distance / 110);
             });
 
             renderer.render(scene, camera);
@@ -160,7 +160,8 @@ export default function Skills() {
                         <div className='row'>
                             <div className="card bg-transparent">
                                 <div className="card-body">
-                                    <h2 className="card-title ">Outils</h2>
+
+                                    <h2 className="text ">Outils</h2>
                                     <ul className="list-unstyled text">
                                         <li><i className="fab fa-git-alt"></i> git</li>
                                         <li><i className="fas fa-code"></i> vscode</li>
