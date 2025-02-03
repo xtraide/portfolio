@@ -51,7 +51,7 @@ const About = () => {
                                 <h1 className="display-1 display-4-sm display-3-md display-2-lg display-1-xl title ">À propos</h1>
                             </div>
                             <div className="card-body">
-                                <p className="card-text p-font-color col-md-8 text-justify description">
+                                <p className="card-text p-font-color col-md-8 text-justify basic-text">
                                     Étudiant passionné par l'informatique, je suis déterminé à
                                     devenir développeur full stack, avec une préférence marquée pour
                                     le backend. Mon parcours d'apprentissage m'a permis de développer

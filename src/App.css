@@ -26,8 +26,10 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: var(--description-color);
-    font-size: var(--description-font-size);
+
 }
+
+
 
 .p-font-color {
     color: var(--description-color);
@@ -46,4 +48,31 @@ body {
     font-weight: 100;
     letter-spacing: 0.1em;
 
+}
+
+@media (min-width: 576px) {
+    .basic-text {
+        font-size: 16px;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .basic-text {
+        font-size: 1.5em;
+    }
+}
+
+
+@media (min-width: 992px) {
+    .basic-text {
+        font-size: 1.5em;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .basic-text {
+        font-size: 1.5em;
+    }
 }

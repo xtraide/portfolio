@@ -162,7 +162,7 @@ export default function Skills() {
                                 <div className="card-body">
 
                                     <h2 className="text ">Outils</h2>
-                                    <ul className="list-unstyled text">
+                                    <ul className="list-unstyled text basic-text">
                                         <li><i className="fab fa-git-alt"></i> git</li>
                                         <li><i className="fas fa-code"></i> vscode</li>
                                         <li><i className="fas fa-paper-plane"></i> postman</li>
