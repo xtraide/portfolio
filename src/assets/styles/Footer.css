@@ -1,18 +1,12 @@
-.contact {}
-
 .card-bg {
     background-color: rgba(0, 0, 0, 0.3);
-
     backdrop-filter: blur(10px);
-
     -webkit-backdrop-filter: blur(10px);
-
-
-
-
-
     color: white;
+}
 
+.font-size {
+    font-size: 1em !important;
 }
 
 .link-no-color {
@@ -25,7 +19,6 @@
 .link-no-color:hover {
     color: #4ec0e9;
     /* Change la couleur au survol */
-
 }
 
 

@@ -16,6 +16,7 @@ export default function Skills() {
 
 
     useEffect(() => {
+        if (!canvasRef.current) return;
         const canvas = canvasRef.current as unknown as HTMLCanvasElement;
         let scene: THREE.Object3D<THREE.Object3DEventMap>, camera: THREE.Camera, controls;
         const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
@@ -176,9 +177,9 @@ export default function Skills() {
                     </div>
                 </div>
                 {/* <div className="gradient"></div> */}
-                <div className='col-12 col-md-8 position-absolute d-flex flex-column justify-content-center translate-right'>
+                {/* <div className='col-12 col-md-8 position-absolute d-flex flex-column justify-content-center translate-right'>
                     <canvas ref={canvasRef} />
-                </div>
+                </div> */}
             </div>
         </div >
 

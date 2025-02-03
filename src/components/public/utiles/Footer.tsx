@@ -35,11 +35,11 @@ export default function Footer() {
     };
 
     return (
-        <div className="container-fluid contact">
+        <div className="col-12">
             <h1 className="display-1 display-4-sm display-3-md display-2-lg display-1-xl title">Contactez-moi</h1>
             <div className="row mt-5">
-                <div className="col-md-6 mb-3">
-                    <div className="card m-3 card-bg box2"
+                <div className="col-3 col-md-6 ">
+                    <div className="card card-bg box2"
                         ref={card1Ref}
                         onMouseEnter={() => handleMouseEnter(card1Ref)}
                         onMouseLeave={() => handleMouseLeave(card1Ref)}
@@ -50,16 +50,16 @@ export default function Footer() {
                         <div className="border borderLeft left-fromBottom"></div>
                         <a href={import.meta.env.VITE_Gihhub} className="ml-3 link-no-color">
                             <div className="card-body d-flex flex-column align-items-center">
-                                <h5 className="card-title">
+                                <div className="card-title">
                                     <FontAwesomeIcon icon={faGithub} size="2x" />
-                                    <span className="ml-3">Github : xtraide</span>
-                                </h5>
+                                    <span className="ml-3 d-none d-md-inline">Github : xtraide</span>
+                                </div>
                             </div>
                         </a>
                     </div>
                 </div>
-                <div className="col-md-6 mb-3">
-                    <div className="card m-3 card-bg box2"
+                <div className="col-3 col-md-6 ">
+                    <div className="card card-bg box2 m-md-3"
                         ref={card2Ref}
                         onMouseEnter={() => handleMouseEnter(card2Ref)}
                         onMouseLeave={() => handleMouseLeave(card2Ref)}
@@ -70,16 +70,16 @@ export default function Footer() {
                         <div className="border borderLeft left-fromBottom"></div>
                         <a href={import.meta.env.VITE_Linkedin} className="ml-3 link-no-color">
                             <div className="card-body d-flex flex-column align-items-center">
-                                <h5 className="card-title">
+                                <div className="card-title">
                                     <FontAwesomeIcon icon={faLinkedin} size="2x" />
-                                    <span className="ml-3">Linkedin : Nicolas Thieblemont</span>
-                                </h5>
+                                    <span className="ml-3 d-none d-md-inline">Linkedin : Nicolas Thieblemont</span>
+                                </div>
                             </div>
                         </a>
                     </div>
                 </div>
-                <div className="col-md-6 mb-3">
-                    <div className="card m-3 card-bg box2"
+                <div className="col-3 col-md-6 ">
+                    <div className="card card-bg box2 m-md-3"
                         ref={card3Ref}
                         onMouseEnter={() => handleMouseEnter(card3Ref)}
                         onMouseLeave={() => handleMouseLeave(card3Ref)}
@@ -90,16 +90,16 @@ export default function Footer() {
                         <div className="border borderLeft left-fromBottom"></div>
                         <a href={`mailto:${import.meta.env.VITE_Email}`} className="ml-3 link-no-color">
                             <div className="card-body d-flex flex-column align-items-center">
-                                <h5 className="card-title">
+                                <div className="card-title">
                                     <FontAwesomeIcon icon={faEnvelope} size="2x" />
-                                    <span className="ml-3">Email : {import.meta.env.VITE_Email}</span>
-                                </h5>
+                                    <span className="ml-3 d-none d-md-inline">{import.meta.env.VITE_Email}</span>
+                                </div>
                             </div>
                         </a>
                     </div>
                 </div>
-                <div className="col-md-6 mb-3">
-                    <div className="card m-3 card-bg box2"
+                <div className="col-3 col-md-6 ">
+                    <div className="card card-bg box2 m-md-3"
                         ref={card4Ref}
                         onMouseEnter={() => handleMouseEnter(card4Ref)}
                         onMouseLeave={() => handleMouseLeave(card4Ref)}
@@ -109,10 +109,10 @@ export default function Footer() {
                         <div className="border borderBottom bottom-fromRight"></div>
                         <div className="border borderLeft left-fromBottom"></div>
                         <div className="card-body d-flex flex-column align-items-center">
-                            <h5 className="card-title">
+                            <div className="card-title">
                                 <FontAwesomeIcon icon={faPhone} size="2x" />
-                                <span className="ml-3">Téléphone : 06 04 40 65 20</span>
-                            </h5>
+                                <span className="ml-3 d-none d-md-inline">Téléphone : 06 04 40 65 20</span>
+                            </div>
                         </div>
                     </div>
                 </div>
