@@ -58,7 +58,7 @@ export default function Project() {
     };
 
     useEffect(() => {
-        projects.forEach((index) => {
+        projects.forEach((_project, index) => {
             gsap.fromTo(
                 `.project-container-${index}`,
                 { opacity: 0, x: 500 },
@@ -87,7 +87,7 @@ export default function Project() {
     }
 
     return (
-        <div className='container-fluid col-md-12'>
+        <div className='container-fluid project col-md-12'>
             <div className="row">
                 <div className="col-md-4 d-flex flex-column p-5">
                     <h1 className="title">Projects</h1>

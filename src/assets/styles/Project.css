@@ -2,7 +2,8 @@
     filter: drop-shadow(0 0 2em #646cffaa);
 }
 
-.project-title {
+.project .project-title {
     cursor: pointer;
     position: relative;
+    font-size: 2.5em;
 }
