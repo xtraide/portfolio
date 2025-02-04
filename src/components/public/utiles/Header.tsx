@@ -6,9 +6,9 @@ import '../../../assets/styles/Header.css';
 const Header = () => {
     return (
 
-        <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top d-none d-md-flex ">
+        <nav className="navbar navbar-expand-lg  fixed-top d-none d-md-flex bg-transparent ">
 
-            <a className="navbar-brand text" href="#">Portfolio</a>
+            <a className="navbar-brand text title-color" href="#">Portfolio</a>
 
             <div className="collapse navbar-collapse" id="navbarNav">
                 <Scrollspy items={['home', 'about', 'skills', 'projects', 'contact']} currentClassName="active" className="navbar-nav d-flex justify-content-around">

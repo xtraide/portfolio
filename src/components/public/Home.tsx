@@ -9,20 +9,19 @@ import "../../assets/styles/Home.css";
 export default function Home() {
     return (
         <div id="fullpage">
-
             <div className="section" id="home">
                 <Intro />
             </div>
-            <div className="section" id="about">
+            <div className="" id="about">
                 <About />
             </div>
-            <div className="section" id="skills">
+            <div className="" id="skills">
                 <Skills />
             </div>
-            <div className="section" id="projects">
+            <div className="" id="projects">
                 <Project />
             </div>
-            <div className="section" id="contact">
+            <div className="" id="contact">
                 <Footer />
             </div>
         </div>

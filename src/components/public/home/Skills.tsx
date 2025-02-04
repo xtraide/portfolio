@@ -16,7 +16,7 @@ export default function Skills() {
 
 
     useEffect(() => {
-        if (!canvasRef.current) return;
+
         const canvas = canvasRef.current as unknown as HTMLCanvasElement;
         let scene: THREE.Object3D<THREE.Object3DEventMap>, camera: THREE.Camera, controls;
         const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
@@ -24,7 +24,7 @@ export default function Skills() {
 
         scene = new THREE.Scene();
 
-        camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 0.1, 1000);
+        camera = new THREE.PerspectiveCamera(40, 16 / 9, 0.1, 1000);
         camera.position.set(0, 0, 70);
         controls = new OrbitControls(camera, renderer.domElement);
         controls.minDistance = 10;
@@ -83,7 +83,7 @@ export default function Skills() {
         function onWindowResize() {
             const width = canvas.clientWidth;
             const height = canvas.clientHeight;
-            renderer.setSize(width, height, false);
+            renderer.setSize(width, height, true);
             (camera as THREE.PerspectiveCamera).aspect = width / height;
 
         }
@@ -152,34 +152,54 @@ export default function Skills() {
 
 
     return (
-        <div className=' p-0 skills col-md-10 mt-5'>
-            <h1 className="display-1 display-4-sm display-3-md display-2-lg display-1-xl title">Compétences</h1>
-            <div className="d-flex flex-column flex-md-row justify-content-center">
-                <div className=' col-12 col-md-4 translate-left'>
-                    <div className="justify-content-center">
-                        <div className='row'>
-                            <div className="card bg-transparent">
-                                <div className="card-body">
+        <div className=' col-12 p-0 skills mt-5'>
+            <div className="card border-0 bg-transparent">
+                <div className="card-header">
+                    <h1 className="display-1 display-4-sm display-3-md display-2-lg display-1-xl title translate-left">Compétences</h1>
+                </div>
+                <div className="d-flex flex-column flex-md-row justify-content-center">
+                    <div className='col-12 col-lg-5 translate-left'>
+                        <div className="justify-content-center">
+                            <div className='row'>
+                                <div className="col-6   bg-transparent">
+                                    <div className="card-body ">
 
-                                    <h2 className="text ">Outils</h2>
-                                    <ul className="list-unstyled text basic-text">
-                                        <li><i className="fab fa-git-alt"></i> git</li>
-                                        <li><i className="fas fa-code"></i> vscode</li>
-                                        <li><i className="fas fa-paper-plane"></i> postman</li>
-                                        <li><i className="fab fa-docker"></i> docker</li>
-                                        <li><i className="fab fa-figma"></i> figma</li>
-                                        <li><i className="fab fa-linux"></i> Linux</li>
-                                        <li><i className="fab fa-node-js"></i> Node.js</li>
-                                    </ul>
+                                        <h2 className="text">Outils</h2>
+                                        <ul className="list-unstyled text basic-text">
+                                            <li><i className="fab fa-git-alt"></i> git</li>
+                                            <li><i className="fas fa-code"></i> vscode</li>
+                                            <li><i className="fas fa-paper-plane"></i> postman</li>
+                                            <li><i className="fab fa-docker"></i> docker</li>
+                                            <li><i className="fab fa-figma"></i> figma</li>
+                                            <li><i className="fab fa-linux"></i> Linux</li>
+                                            <li><i className="fab fa-node-js"></i> Node.js</li>
+                                        </ul>
+                                    </div>
                                 </div>
+
+                                <div className="col-6 card bg-transparent d-lg-none">
+                                    <div className="card-body">
+                                        <h2 className="text">Langages</h2>
+                                        <ul className="list-unstyled text basic-text">
+                                            <li><i className="fab fa-js"></i> JavaScript</li>
+                                            <li><i className="fab fa-html5"></i> Html</li>
+                                            <li><i className="fab fa-css3-alt"></i> Css</li>
+                                            <li><i className="fab fa-java"></i> Java</li>
+                                            <li><i className="fab fa-php"></i> Php</li>
+                                            <li><i className="fab fa-python"></i> Python</li>
+                                            <li><i className="fab fa-typescript"></i> TypeScript</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
+                    {/* <div className="gradient"></div> */}
+                    <div className='col-7 d-none d-lg-flex d-xl-flex  flex-column justify-content-center translate-right'>
+                        <canvas ref={canvasRef} />
+                    </div>
                 </div>
-                {/* <div className="gradient"></div> */}
-                {/* <div className='col-12 col-md-8 position-absolute d-flex flex-column justify-content-center translate-right'>
-                    <canvas ref={canvasRef} />
-                </div> */}
             </div>
         </div >
 

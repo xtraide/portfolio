@@ -35,6 +35,10 @@ body {
     color: var(--description-color);
 }
 
+.title-color {
+    color: var(--title-color) !important;
+}
+
 .alter-color {
     color: var(--title-alt-color);
 }
@@ -42,7 +46,6 @@ body {
 .title {
     font-size: 3.2em;
     line-height: 1.1;
-
     color: var(--title-color);
     text-transform: uppercase;
     font-weight: 100;

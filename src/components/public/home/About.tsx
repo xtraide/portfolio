@@ -42,16 +42,16 @@ const About = () => {
 
             <div className="fade-in-section">
                 <div className="row">
-                    <div className="col-md-5 d-flex justify-content-center align-items-center">
+                    <div className="col-12 col-md-5 d-flex justify-content-center align-items-center">
                         <img src="/vite.svg" alt="Vite Logo" className="img-fluid" />
                     </div>
                     <div className="col-12 col-md-7">
-                        <div className="card bg-transparent text">
+                        <div className="card border-0 bg-transparent text">
                             <div className="card-header ">
                                 <h1 className="display-1 display-4-sm display-3-md display-2-lg display-1-xl title ">À propos</h1>
                             </div>
                             <div className="card-body">
-                                <p className="card-text p-font-color col-md-8 text-justify basic-text">
+                                <p className="card-text p-font-color text-justify basic-text">
                                     Étudiant passionné par l'informatique, je suis déterminé à
                                     devenir développeur full stack, avec une préférence marquée pour
                                     le backend. Mon parcours d'apprentissage m'a permis de développer

@@ -39,7 +39,7 @@ export default function Footer() {
             <h1 className="display-1 display-4-sm display-3-md display-2-lg display-1-xl title">Contactez-moi</h1>
             <div className="row mt-5">
                 <div className="col-3 col-md-6 ">
-                    <div className="card card-bg box2"
+                    <div className="card card-bg box2 m-md-3"
                         ref={card1Ref}
                         onMouseEnter={() => handleMouseEnter(card1Ref)}
                         onMouseLeave={() => handleMouseLeave(card1Ref)}

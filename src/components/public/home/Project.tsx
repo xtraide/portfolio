@@ -32,7 +32,7 @@ export default function Project() {
 
     const handleMouseEnter = (e: React.MouseEvent<HTMLHeadingElement, MouseEvent>, project: ModelProject) => {
         gsap.to(e.currentTarget, {
-            scale: 1.2,
+            scale: 1.1,
             color: '#4ec0e9',
             duration: 0.3,
         });
@@ -103,25 +103,25 @@ export default function Project() {
     }
 
     return (
-        <div className='project col-md-12'>
-            <div className="row">
-                <div className="col-md-4 d-flex flex-column">
-                    <h1 className="display-1 display-4-sm display-3-md display-2-lg display-1-xl title project-translate-right">Projects</h1>
+        <div className='project col-12'>
+            <div className="row  ">
+                <div className="col-6 card border-0 bg-transparent d-flex flex-column">
+                    <h1 className="display-1 display-4-sm display-3-md display-2-lg display-1-xl title project-translate-right card-header font-color ">Projects</h1>
                     {projects.map((project, index) => (
                         <div className={`d-flex project-container project-container-${index}`} key={project.id}>
                             <div className="">
-                                <h2
-                                    className="project-title title project-font-size"
+                                <div
+                                    className="project-title title project-font-size card-body font-color"
                                     onMouseEnter={(e) => handleMouseEnter(e, project)}
                                     onMouseLeave={handleMouseLeave}
                                 >
                                     {project.title}
-                                </h2>
+                                </div>
                             </div>
                         </div>
                     ))}
                 </div>
-                <div className="col-md-8 d-flex flex-row justify-content-center position-relative ">
+                <div className="col-6 d-flex flex-row justify-content-center position-relative ">
                     <img
                         id="project-image"
                         src={currentImage || ''}
@@ -131,6 +131,6 @@ export default function Project() {
                     />
                 </div>
             </div>
-        </div>
+        </div >
     );
 }

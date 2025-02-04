@@ -8,6 +8,10 @@
 
 }
 
+.project .font-color {
+    color: var(--title-color);
+}
+
 .project .project-font-size {
     font-size: 1.5em !important;
 }
