@@ -6,7 +6,7 @@ import '../../../assets/styles/Header.css';
 const Header = () => {
     return (
 
-        <nav className="navbar navbar-expand-lg  fixed-top d-none d-md-flex bg-transparent ">
+        <nav className="navbar navbar-expand-lg  fixed-top d-none d-md-flex bg-transparent z-1">
 
             <a className="navbar-brand text title-color" href="#">Portfolio</a>
 
