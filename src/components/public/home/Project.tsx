@@ -10,8 +10,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Project() {
-    const [loading, setLoading] = useState<boolean>(false);
-    const [error, setError] = useState<string | null>(null);
+    // const [loading, setLoading] = useState<boolean>(false);
+    // const [error, setError] = useState<string | null>(null);
     const [projects, setProjects] = useState<any[]>([]);
     const [currentImage, setCurrentImage] = useState<string | null>(null);
     if (projects.length === 0) {
