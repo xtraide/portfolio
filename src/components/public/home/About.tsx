@@ -43,7 +43,7 @@ const About = () => {
             <div className="fade-in-section">
                 <div className="row">
                     <div className="col-12 col-md-5 d-flex justify-content-center align-items-center">
-                        <img src="/vite.svg" alt="Vite Logo" className="img-fluid" />
+                        <img src="/IMG_20250207_151939_888.jpg" alt="Photo" className="img-fluid col-md-8" />
                     </div>
                     <div className="col-12 col-md-7">
                         <div className="card border-0 bg-transparent text">
