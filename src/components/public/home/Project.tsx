@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Projects from '../../services/Project';
+// import Projects from '../../services/Project';
 import ModelProject from '../../models/ModelProject';
 
 import '../../../assets/styles/Project.css';

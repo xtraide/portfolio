@@ -1,5 +1,5 @@
 import About from "./home/About";
-import Project from "./home/Project";
+// import Project from "./home/Project";
 import Skills from "./home/Skills";
 import Intro from "./home/Intro";
 import Footer from "./utiles/Footer";
