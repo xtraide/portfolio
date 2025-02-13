@@ -5,33 +5,33 @@ import gsap from 'gsap';
 export default function Skills() {
 
     const imagesTechno = [
-        "/public/ICONE/html-5.png",
-        "/public/ICONE/css-3.png",
-        "/public/ICONE/js.png",
-        "/public/ICONE/java.png",
-        "/public/ICONE/php.png",
-        "/public/ICONE/python.png",
-        "/public/ICONE/serveur-sql.png",
-        "/public/ICONE/typescript.png",
-        "/public/ICONE/gsap.png",
-        "/public/ICONE/threeJs.png",
+        "/ICONE/html-5.png",
+        "/ICONE/css-3.png",
+        "/ICONE/js.png",
+        "/ICONE/java.png",
+        "/ICONE/php.png",
+        "/ICONE/python.png",
+        "/ICONE/serveur-sql.png",
+        "/ICONE/typescript.png",
+        "/ICONE/gsap.png",
+        "/ICONE/threeJs.png",
     ];
 
     const imagesFramework = [
-        "/public/ICONE/bootstrap.png",
-        "/public/ICONE/springboot.png",
-        "/public/ICONE/react.png",
-        "/public/ICONE/angular.png",
+        "/ICONE/bootstrap.png",
+        "/ICONE/springboot.png",
+        "/ICONE/react.png",
+        "/ICONE/angular.png",
     ];
 
     const imagesOutils = [
-        "/public/ICONE/git.png",
-        "/public/ICONE/vscode.png",
-        "/public/ICONE/postman.png",
-        "/public/ICONE/docker.png",
-        "/public/ICONE/figma.png",
-        "/public/ICONE/linux.png",
-        "/public/ICONE/nodeJs.png",
+        "/ICONE/git.png",
+        "/ICONE/vscode.png",
+        "/ICONE/postman.png",
+        "/ICONE/docker.png",
+        "/ICONE/figma.png",
+        "/ICONE/linux.png",
+        "/ICONE/nodeJs.png",
     ];
 
     const [selectedImages, setSelectedImages] = useState(imagesTechno);
