@@ -15,3 +15,151 @@
         --size: 500px;
     }
 }
+
+.img-taille {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+}
+
+.swiper-container {
+    width: 100%;
+    max-width: 100vw;
+    height: 300px;
+    /* Ajuste selon tes besoins */
+    overflow: hidden;
+}
+
+.swiper-container.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto !important;
+}
+
+.card-bg {
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: white;
+}
+
+.font-size {
+    font-size: 1em !important;
+}
+
+.link-no-color {
+    color: inherit;
+    /* Hérite de la couleur du parent */
+    text-decoration: none;
+    /* Enlève la décoration de texte (soulignement) */
+}
+
+.link-no-color:hover {
+    color: #4ec0e9;
+    /* Change la couleur au survol */
+}
+
+
+
+.box,
+.box2,
+.box3,
+.box4,
+.box5,
+.box6,
+.box7,
+.box8,
+.box9 {
+    background-color: #1a1a1a;
+
+}
+
+.border {
+    background-color: yellow;
+    position: absolute;
+}
+
+.borderTop {
+    height: 2px;
+    top: 0;
+    width: 100%;
+    transform: scaleX(0);
+}
+
+.topCenter-out {
+    transform-origin: center top;
+}
+
+
+
+.top-fromLeft {
+    transform-origin: left top;
+}
+
+.top-fromRight {
+    transform-origin: right top;
+}
+
+.borderRight {
+    right: 0;
+    width: 2px;
+    height: 100%;
+    transform: scaleY(0);
+}
+
+.right-centerOut,
+.rightCenterOut-Only {
+    transform-origin: right center;
+}
+
+.right-Tophalf {
+    transform-origin: right top;
+}
+
+.right-fromTop {
+    transform-origin: top right;
+}
+
+.right-fromBottom {
+    transform-origin: bottom right;
+}
+
+.borderBottom {
+    height: 2px;
+    bottom: 0;
+    width: 100%;
+    transform: scaleX(0);
+}
+
+.bottom-CenterOut {
+    transform-origin: center bottom;
+}
+
+.bottom-fromRight {
+    transform-origin: right bottom;
+}
+
+.bottom-fromLeft {
+    transform-origin: top left;
+}
+
+.borderLeft {
+    left: 0;
+    width: 2px;
+    height: 100%;
+    transform: scaleY(0);
+}
+
+.left-CenterOut,
+.leftCenterOut-Only {
+    transform-origin: left center;
+}
+
+.left-fromBottom {
+    transform-origin: left bottom;
+}
+
+.left-fromTop {
+    transform-origin: top left;
+}

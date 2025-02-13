@@ -1,10 +1,12 @@
 import About from "./home/About";
-// import Project from "./home/Project";
+import Project from "./home/Project";
 import Skills from "./home/Skills";
 import Intro from "./home/Intro";
 import Footer from "./utiles/Footer";
 
 import "../../assets/styles/Home.css";
+
+
 
 export default function Home() {
     return (
@@ -16,18 +18,18 @@ export default function Home() {
             <div className="section" id="home">
                 <Intro />
             </div>
-            <div className="" id="about">
+            <div className="section" id="about">
                 <About />
             </div>
-            <div className="" id="skills">
+            <div className="section" id="skills">
                 <Skills />
             </div>
-            {/* <div className="" id="projects">
+            <div className="section" id="projects">
                 <Project />
-            </div> */}
-            <div className="" id="contact">
+            </div>
+            <div className="section" id="contact">
                 <Footer />
             </div>
-        </div>
+        </div >
     );
 }

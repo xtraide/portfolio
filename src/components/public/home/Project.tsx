@@ -24,9 +24,9 @@ export default function Project() {
                 "link": "",
                 "github": "",
                 "description": "Site de la journée portes ouvertes de Universite Gustave Eiffel ",
-                "fullDescription": "Description complète du projet 1",
+                "fullDescription": "Le projet JPO Gustave Eiffel est un projet de site web de présentation de la journée portes ouvertes de l'université Gustave Eiffel. Le site permet de mettre en forme , presenter et alerter les visiteur sur les activités de l'université. Le site est réalisé en React et Spring Boot.",
                 "image": "vite.svg",
-                "frontimage": "vite.svg",
+                "frontimage": "JPO.png",
                 "tech": [
                     "React",
                     "TypeScript",
@@ -45,7 +45,7 @@ export default function Project() {
                 "description": "Site de reservation de sushi",
                 "fullDescription": "Zushi est un projet d'application web de gestion des commandes pour un restaurant de sushi, l'objecitf est de créer un projet pluridisciplinaire mélangeant des compétence en développement front, développement back et UX/UI Design. Les missiosn étaient de réaliser une RESTAPI dans le langage de notre choix, nous avons choisi Symfony en mode API. Nous vons également réaliser une maquette et intégrer la partie front à l'aide d'Angular liant grâce à ses services le front et le back.",
                 "image": "vite.svg",
-                "frontimage": "vite.svg",
+                "frontimage": "zushi.png",
                 "tech": [
                     "Angular",
                     "symfony",
@@ -54,32 +54,32 @@ export default function Project() {
                 "bgcolor": "#e333ff",
                 "date": "2023-02-01"
             },
+            // {
+            //     "id": "3",
+            //     "title": "LIGM",
+            //     "link": "",
+            //     "github": "",
+            //     "description": "Site de display des projets de recherche de LIGM",
+            //     "fullDescription": "Le projet LIGM est un projet de site web de présentation des projets de recherche du laboratoire d'informatique Gaspard Monge. Le site permet de mettre en forme , presenter et alerter les visiteur sur la qualiter de l'aire au sein des universite colaboratrice. Le site est réalisé en Angular et Spring Boot.",
+            //     "image": "vite.svg",
+            //     "frontimage": "vite.svg",
+            //     "tech": [
+            //         "Angular",
+            //         "symfony",
+            //         "sql"
+            //     ],
+            //     "bgcolor": "#e0e0e0",
+            //     "date": "2023-03-01"
+            // },
             {
                 "id": "3",
-                "title": "LIGM",
-                "link": "",
-                "github": "",
-                "description": "Site de display des projets de recherche de LIGM",
-                "fullDescription": "Le projet LIGM est un projet de site web de présentation des projets de recherche du laboratoire d'informatique Gaspard Monge. Le site permet de mettre en forme , presenter et alerter les visiteur sur la qualiter de l'aire au sein des universite colaboratrice. Le site est réalisé en Angular et Spring Boot.",
-                "image": "vite.svg",
-                "frontimage": "vite.svg",
-                "tech": [
-                    "Angular",
-                    "symfony",
-                    "sql"
-                ],
-                "bgcolor": "#e0e0e0",
-                "date": "2023-03-01"
-            },
-            {
-                "id": "4",
                 "title": "Systeme solaire",
                 "link": "",
                 "github": "https://github.com/xtraide/solar-sys",
                 "description": "Realisation d'un systeme solaire en 3D",
                 "fullDescription": "Le projet systeme solaire est un projet de réalisation d'un systeme solaire en 3D, il est réalisé en React et Three.js. Cette creation est un projet de découverte de three.js",
                 "image": "vite.svg",
-                "frontimage": "UTJUIJUAAKSJJSBE6PVRMSUJFY-2262075248.jpg",
+                "frontimage": "System.png",
                 "tech": [
                     "tree.js",
                     "React",
@@ -176,7 +176,7 @@ export default function Project() {
     return (
         <div className='project col-12'>
             <div className="row  ">
-                <div className="col-6 card border-0 bg-transparent d-flex flex-column">
+                <div className="col-9 col-md-6 card border-0 bg-transparent d-flex flex-column">
                     <h1 className="display-1 display-4-sm display-3-md display-2-lg display-1-xl title project-translate-right card-header font-color ">Projects</h1>
                     {projects.map((project, index) => (
                         <div className={`d-flex project-container project-container-${index}`} key={project.id}>
@@ -192,7 +192,7 @@ export default function Project() {
                         </div>
                     ))}
                 </div>
-                <div className="col-6 d-flex flex-row justify-content-center position-relative ">
+                <div className="col-6 d-none d-md-flex d flex-row justify-content-center position-relative ">
                     <img
                         id="project-image"
                         src={currentImage || ''}
