@@ -177,7 +177,7 @@ export default function Project() {
         <div className='project col-12'>
             <div className="row  ">
                 <div className="col-9 col-md-6 card border-0 bg-transparent d-flex flex-column">
-                    <h1 className="display-1 display-4-sm display-3-md display-2-lg display-1-xl title project-translate-right card-header font-color ">Projects</h1>
+                    <h1 className="display-1 display-4-sm display-3-md display-2-lg display-1-xl title project-translate-right card-header font-color border-0 ">Projects</h1>
                     {projects.map((project, index) => (
                         <div className={`d-flex project-container project-container-${index}`} key={project.id}>
                             <div className="">
