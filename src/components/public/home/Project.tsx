@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import ModelProject from '../../models/ModelProject';
 import '../../../assets/styles/Project.css';
 import gsap from 'gsap';
