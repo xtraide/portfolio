@@ -11,7 +11,7 @@ const Header = () => {
             <a className="navbar-brand text title-color" href="#">Portfolio</a>
 
             <div className="collapse navbar-collapse" id="navbarNav">
-                <Scrollspy items={['home', 'about', 'skills', 'projects', 'contact']} currentClassName="active" className="navbar-nav d-flex justify-content-around">
+                <Scrollspy items={['home', 'about', 'skills', 'projects', 'contact', 'Veille']} currentClassName="active" className="navbar-nav d-flex justify-content-around">
                     <li className="nav-item flex-fill text-center text">
                         <a className="nav-link " href="#home">Accueil</a>
                     </li>
@@ -26,6 +26,9 @@ const Header = () => {
                     </li>
                     <li className="nav-item flex-fill text-center text">
                         <a className="nav-link " href="#contact">Contact</a>
+                    </li>
+                    <li className="nav-item flex-fill text-center text">
+                        <a className="nav-link " href="#contact">Veille</a>
                     </li>
                 </Scrollspy>
             </div>

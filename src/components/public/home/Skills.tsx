@@ -65,7 +65,7 @@ export default function Skills() {
 
     return (
 
-        <div className='col-12 p-0 '>
+        <div className='col-11 p-0 justify-content-center d-flex flex-column'>
             <h1 className="display-1 display-4-sm display-3-md display-2-lg display-1-xl title translate-left">Compétences</h1>
             <div className='d-flex justify-content-center basic-text'>
                 <div className="box2 card-bg m-md-3"

@@ -35,7 +35,7 @@ export default function Footer() {
     };
 
     return (
-        <div className="col-12">
+        <div className="col-11">
             <h1 className="display-1 display-4-sm display-3-md display-2-lg display-1-xl title">Contactez-moi</h1>
             <div className="row mt-5">
                 <div className="col-3 col-md-6 ">
@@ -49,10 +49,10 @@ export default function Footer() {
                         <div className="border borderBottom bottom-fromRight"></div>
                         <div className="border borderLeft left-fromBottom"></div>
                         <a href={import.meta.env.VITE_Gihhub} className="ml-3 link-no-color">
-                            <div className="card-body d-flex flex-column align-items-center">
-                                <div className="card-title">
+                            <div className="card-body d-flex flex-column align-items-center ">
+                                <div className="card-title d-flex gap-1  ">
                                     <FontAwesomeIcon icon={faGithub} size="2x" />
-                                    <span className="ml-3 d-none d-md-inline">Github : xtraide</span>
+                                    <span className=" d-none d-md-inline m-1">Github : xtraide</span>
                                 </div>
                             </div>
                         </a>
@@ -70,9 +70,9 @@ export default function Footer() {
                         <div className="border borderLeft left-fromBottom"></div>
                         <a href={import.meta.env.VITE_Linkedin} className="ml-3 link-no-color">
                             <div className="card-body d-flex flex-column align-items-center">
-                                <div className="card-title">
+                                <div className="card-title d-flex gap-1">
                                     <FontAwesomeIcon icon={faLinkedin} size="2x" />
-                                    <span className="ml-3 d-none d-md-inline">Linkedin : Nicolas Thieblemont</span>
+                                    <span className=" d-none d-md-inline m-1">Linkedin : Nicolas Thieblemont</span>
                                 </div>
                             </div>
                         </a>
@@ -90,9 +90,9 @@ export default function Footer() {
                         <div className="border borderLeft left-fromBottom"></div>
                         <a href={`mailto:${import.meta.env.VITE_Email}`} className="ml-3 link-no-color">
                             <div className="card-body d-flex flex-column align-items-center">
-                                <div className="card-title">
+                                <div className="card-title d-flex gap-1">
                                     <FontAwesomeIcon icon={faEnvelope} size="2x" />
-                                    <span className="ml-3 d-none d-md-inline">{import.meta.env.VITE_Email}</span>
+                                    <span className="d-none d-md-inline m-1">{import.meta.env.VITE_Email}</span>
                                 </div>
                             </div>
                         </a>
@@ -109,9 +109,9 @@ export default function Footer() {
                         <div className="border borderBottom bottom-fromRight"></div>
                         <div className="border borderLeft left-fromBottom"></div>
                         <div className="card-body d-flex flex-column align-items-center">
-                            <div className="card-title">
+                            <div className="card-title gap-1">
                                 <FontAwesomeIcon icon={faPhone} size="2x" />
-                                <span className="ml-3 d-none d-md-inline">Téléphone : 06 04 40 65 20</span>
+                                <span className="d-none d-md-inline m-1">Téléphone : 06 04 40 65 20</span>
                             </div>
                         </div>
                     </div>

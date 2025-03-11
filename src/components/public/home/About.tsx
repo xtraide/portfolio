@@ -38,12 +38,12 @@ const About = () => {
     }, []);
 
     return (
-        <div className="col-12  d-flex justify-content-center align-items-center">
+        <div className="col-11  d-flex justify-content-center align-items-center">
 
             <div className="fade-in-section">
                 <div className="row">
                     <div className="col-12 col-md-5 d-flex justify-content-center align-items-center">
-                        <img src="/IMG_20250207_151939_888.jpg" alt="Photo" className="img-fluid col-md-8" />
+                        <img src="/IMG_20250207_151939_888.jpg" alt="Photo" className="img-fluid col-md-8 img-radius" />
                     </div>
                     <div className="col-12 col-md-7">
                         <div className="card border-0 bg-transparent text">
@@ -61,6 +61,7 @@ const About = () => {
                                     suis à la recherche d'opportunités stimulantes pour perfectionner
                                     mes compétences et évoluer en tant que professionnel polyvalent.
                                 </p>
+
                             </div>
                         </div>
                     </div>
