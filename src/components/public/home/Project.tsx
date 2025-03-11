@@ -49,23 +49,7 @@ export default function Project() {
                 "bgcolor": "#e333ff",
                 "date": "2024-01-01"
             },
-            // {
-            //     "id": "3",
-            //     "title": "LIGM",
-            //     "link": "",
-            //     "github": "",
-            //     "description": "Site de display des projets de recherche de LIGM",
-            //     "fullDescription": "Le projet LIGM est un projet de site web de présentation des projets de recherche du laboratoire d'informatique Gaspard Monge. Le site permet de mettre en forme , presenter et alerter les visiteur sur la qualiter de l'aire au sein des universite colaboratrice. Le site est réalisé en Angular et Spring Boot.",
-            //     "image": "vite.svg",
-            //     "frontimage": "vite.svg",
-            //     "tech": [
-            //         "Angular",
-            //         "symfony",
-            //         "sql"
-            //     ],
-            //     "bgcolor": "#e0e0e0",
-            //     "date": "2023-03-01"
-            // },
+
             {
                 "id": "3",
                 "title": "Systeme solaire",
@@ -196,7 +180,7 @@ export default function Project() {
                         <span className="close" onClick={closeModal}>&times;</span>
                         <h2>{selectedProject.title}</h2>
                         <p>{selectedProject.fullDescription}</p>
-                        <p><strong>Technologies:</strong> {selectedProject.tech.join(', ')}</p>
+                        <p><strong>Technologies:</strong> {Array.isArray(selectedProject.tech) ? selectedProject.tech.join(', ') : selectedProject.tech}</p>
                         <p><strong>Date:</strong> {selectedProject.date}</p>
                         <a href={selectedProject.github} target="_blank" rel="noopener noreferrer">GitHub</a>
                     </div>
